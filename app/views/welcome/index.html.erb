@@ -1,0 +1,14 @@
+
+<% if current_user %>
+<div class="displayTree">
+  <li><%= link_to "Sign up new user", sign_up_path %></li>
+  <li><%= link_to "See all family members", users_path %></li>
+  <%= render "trees/index" %>
+<% else %>
+  <style>
+  body{
+  background: url("http://images.clipartpanda.com/nuclear-family-clipart-familyl1800x1200.jpg") no-repeat fixed center;
+  background-size: 600px 300px;}
+  </style>
+</div>
+<% end %>
