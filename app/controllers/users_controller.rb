@@ -3,7 +3,11 @@ class UsersController < ApplicationController
     @users = User.all.map do |user|
       user.as_json include: [:pictures]
     end
-    # render json:@users
+    if request.xhr?
+      render json: @users
+    else
+      # render json:@users
+    end
   end
 
   def show
