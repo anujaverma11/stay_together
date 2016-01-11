@@ -10,7 +10,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem "d3-rails"
 gem 'therubyracer', platforms: :ruby
 gem 'react-rails', '~> 1.0'
-
+gem 'uglifier'
 
 group :development, :test do
   gem 'byebug'
