@@ -24,10 +24,6 @@ Also the other important feature of this app is to keep and share family picture
 - An admin can add life dates of any member. (future)
 - An admin can add parent/spouse/children of a family member (implemented)
 
-I want to learn React.js, Rails and w/PostgreSQL for database and D3.js(Collapsible Tree(http://bl.ocks.org/mbostock/4339083)).
-
-
-
 
 
 

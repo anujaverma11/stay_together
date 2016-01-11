@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150913064131) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "pictures", force: :cascade do |t|
     t.string   "name"
     t.string   "link"
@@ -42,7 +45,7 @@ ActiveRecord::Schema.define(version: 20150913064131) do
     t.datetime "updated_at",     null: false
   end
 
-  add_index "users", ["parent_id"], name: "index_users_on_parent_id"
-  add_index "users", ["spouse_id"], name: "index_users_on_spouse_id"
+  add_index "users", ["parent_id"], name: "index_users_on_parent_id", using: :btree
+  add_index "users", ["spouse_id"], name: "index_users_on_spouse_id", using: :btree
 
 end
