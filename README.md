@@ -1,4 +1,4 @@
-# Stay Together
+#### Stay Together
 
 The idea of this app is to present a tree of family members so that a new member to family can place them and how they are related to other family members.
 
