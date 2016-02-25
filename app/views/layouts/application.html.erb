@@ -8,7 +8,12 @@
 
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script src="https://fb.me/react-0.13.3.js"></script>
+  <script src="https://fb.me/react-0.14.7.js"
+        integrity="sha384-xQae1pUPdAKUe0u0KUTNt09zzdwheX4VSUsV8vatqM+t6X7rta01qOzessL808ox"
+        crossorigin="anonymous"></script>
+  <script src="https://fb.me/react-dom-0.14.7.js"
+        integrity="sha384-A1t0GCrR06cTHvMjaxeSE8XOiz6j7NvWdmxhN/9z748wEvJTVk13Rr8gMzTUnd8G"
+        crossorigin="anonymous"></script>
   <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
@@ -34,6 +39,8 @@
           <li><%= link_to "Log out", log_out_path %></li>
         <% else %>
           <li><%= link_to "log in", log_in_path %></li>
+          <li><font color="white">demo username: averma@example.com / demo password:password</font>
+          </li>
         <% end %>
       </ul>
     </div>

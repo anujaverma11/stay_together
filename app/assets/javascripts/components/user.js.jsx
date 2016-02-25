@@ -1,3 +1,4 @@
+
 var User = React.createClass({
   render: function() {
     console.log('User component rendering with', this.props.user)

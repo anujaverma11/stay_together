@@ -9,7 +9,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
 gem "d3-rails"
 gem 'therubyracer', platforms: :ruby
-gem 'react-rails', '~> 1.0'
+gem 'react-rails', '~> 1.6.0'
 gem 'uglifier'
 
 group :development, :test do
