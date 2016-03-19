@@ -1,0 +1,46 @@
+body{
+  min-height:100%;
+  background: url("family.jpg") no-repeat fixed right;
+  background-size: 600px 600px;
+  background-color: #D4E9F3;
+}
+.container-fluid{
+  background-color: #BBD45E;
+  border-style: none;
+}
+
+.displayTree {
+
+}
+
+.brand{
+    font-family: 'Great Vibes', cursive;
+    color: green;
+    font-size: 100px;
+}
+
+#intro{
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+}
+
+
+.login{
+  margin-left: 500px
+}
+
+.login-form{
+  margin-left: 500px
+}
+.menu-div1 {
+  text-align: right;
+  margin-right: 20px;
+  margin-left: 1000px;
+  margin-top: -110px;
+}
+.menu-div2 {
+  text-align: right;
+  margin-right: 20px;
+  margin-left: 1000px;
+  margin-top: 10px;
+}

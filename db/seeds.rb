@@ -1,5 +1,5 @@
 def create_user(name, email)
-  User.create!(first_name:"#{name}", email:"#{email}@example.com", password: 'password')
+  User.create!(first_name:"#{name}", email:"#{email}@example.com", password: 'password', family_id:'162')
 end
 
 User.delete_all

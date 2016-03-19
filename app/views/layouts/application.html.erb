@@ -2,57 +2,36 @@
 <html>
 <head>
   <title>StayTogether</title>
+  <meta charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Kranky|Playball|Great+Vibes' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="https://fb.me/react-0.14.7.min.js"></script>
+  <script src="https://fb.me/react-dom-0.14.7.min.js"></script>
+  <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
 
+  <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
-  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script src="https://fb.me/react-0.14.7.js"
-        integrity="sha384-xQae1pUPdAKUe0u0KUTNt09zzdwheX4VSUsV8vatqM+t6X7rta01qOzessL808ox"
-        crossorigin="anonymous"></script>
-  <script src="https://fb.me/react-dom-0.14.7.js"
-        integrity="sha384-A1t0GCrR06cTHvMjaxeSE8XOiz6j7NvWdmxhN/9z748wEvJTVk13Rr8gMzTUnd8G"
-        crossorigin="anonymous"></script>
-  <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag 'application', media: 'all' %>
-  <meta charset="utf-8">
-
 </head>
+
 <body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <p class="brand">Stay Together</p>
-    </div>
-    <div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Home</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <% if current_user %>
-          <font color="white">
-          <li>Logged in as <%= current_user.email %></li></font>
-          <li><%= link_to "Log out", log_out_path %></li>
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+  <% end %>
+  <a href="/" style="text-decoration:none"><p class="brand">Stay Together</p></a>
+      <% if current_user %>
+          <div class="menu-div1">
+            <%= link_to '<button type="button" class="btn btn-success">Logout</button>'.html_safe, log_out_path %>
+            <div>Logged in as <%= current_user.email %></div>
+          </div>
         <% else %>
-          <li><%= link_to "log in", log_in_path %></li>
-          <li><font color="white">demo username: Anuja@example.com / demo password:password</font>
-          </li>
+        <div id="intro">Like branches on a tree, we all grow on different directions,
+    yet our roots remain as one.<br>
+    Make your family tree to pass onto generations.</div>
+          <%= link_to '<button type="button" class="btn btn-success login">My Family Tree</button>'.html_safe, log_in_path %>
         <% end %>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-<% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, :id => "flash_#{name}" %>
-<% end %>
-
-<%= yield %>
-
+  <%= yield %>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 </body>
 </html>

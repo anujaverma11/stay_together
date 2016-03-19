@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20150913064131) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.integer  "family_id"
     t.integer  "parent_id"
     t.integer  "spouse_id"
     t.string   "first_name"
